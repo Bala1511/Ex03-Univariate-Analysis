@@ -21,6 +21,7 @@ Mention the datatypes from the data.
 # Step5
 Count the values from the data.
 
+# superstore.csv
 ```
 Developed By : BALA MURUGAN P
 reference number: 212222230017
@@ -42,8 +43,27 @@ sns.countplot(x='Postal Code',data=df)
 sns.distplot(df["Postal Code"])
 df.describe()
 ```
+# diabetes.csv
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+df = pd.read_csv("/diabetes.csv")
+df
+df.info()
+df.isnull().sum()
+df.dtypes
+df.describe()
+df['Glucose'].value_counts()
+sns.boxplot(x="Glucose",data=df)
+sns.countplot(x="Glucose",data=df)
+sns.distplot(df['Glucose'])
+sns.histplot(x="Glucose",data=df)
+df.skew()
+df.kurtosis()
+```
 
-# OUTPUT
+# OUTPUT superstore.csv
 
 
 ![Screenshot 2023-03-27 203824](https://user-images.githubusercontent.com/118680410/228207821-4c5919f1-2ef7-4c93-89fe-10e0d11c530a.png)
@@ -55,3 +75,17 @@ df.describe()
 ![Screenshot 2023-03-28 155353](https://user-images.githubusercontent.com/118680410/228207853-f70cc0bb-b67a-4e4f-a770-b4e23ce064ab.png)
 ![Screenshot 2023-03-28 155400](https://user-images.githubusercontent.com/118680410/228207859-9db566f0-268b-4e82-a056-1b7466ddead5.png)
 ![Screenshot 2023-03-28 155412](https://user-images.githubusercontent.com/118680410/228207862-c616fd40-ea50-4ccc-82ff-6ae1c394be55.png)
+
+# OUTPUT diabetes.csv
+
+![Screenshot 2023-03-30 211938](https://user-images.githubusercontent.com/118680410/228897098-9b03b1fb-2e9e-4a5c-8629-f1321503f78c.png)
+![Screenshot 2023-03-30 211953](https://user-images.githubusercontent.com/118680410/228897290-c32a6b68-99c7-464c-adf1-c943222bab52.png)
+
+![Screenshot 2023-03-30 212008](https://user-images.githubusercontent.com/118680410/228897321-3afa4c14-bac9-460c-86eb-4b569f1140fb.png)
+![Screenshot 2023-03-30 212024](https://user-images.githubusercontent.com/118680410/228897343-9b533df9-5808-41ba-b926-a6c368a560b7.png)
+![Screenshot 2023-03-30 212037](https://user-images.githubusercontent.com/118680410/228897356-1d8ad723-96f1-4ca2-9abb-dabb003bc0a3.png)
+![Screenshot 2023-03-30 212047](https://user-images.githubusercontent.com/118680410/228897410-eb383e4d-6785-45d9-8ab3-3721edde23bd.png)
+![Screenshot 2023-03-30 212101](https://user-images.githubusercontent.com/118680410/228897476-8d958b34-2f05-44cf-9eb7-14cec6e69b3a.png)
+![Screenshot 2023-03-30 212111](https://user-images.githubusercontent.com/118680410/228897549-056925e3-9be1-4e64-8b9d-a6063c5da099.png)
+![Screenshot 2023-03-30 212127](https://user-images.githubusercontent.com/118680410/228897590-b123a0d1-93de-457a-8bf7-0e92f1f24cdd.png)
+![Screenshot 2023-03-30 212137](https://user-images.githubusercontent.com/118680410/228897642-560def56-cb8e-4359-bad2-1e2f03d159ed.png)
